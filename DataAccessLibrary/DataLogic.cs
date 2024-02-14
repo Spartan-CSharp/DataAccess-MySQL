@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using DataAccessLibrary.Models;
+using DataAccessLibrary.MySQLDataAccess;
 using DataAccessLibrary.SQLDataAccess;
 using DataAccessLibrary.SQLiteDataAccess;
 
@@ -26,6 +27,10 @@ namespace DataAccessLibrary
 				case DBTYPES.SQLite:
 					_connectionString = _configuration.GetConnectionString("SQLite");
 					_crud = new SQLiteCrud(_connectionString);
+					break;
+				case DBTYPES.MySQL:
+					_connectionString = _configuration.GetConnectionString("MySQL");
+					_crud = new MySQLCrud(_connectionString);
 					break;
 				default:
 					_connectionString = _configuration.GetConnectionString("SQLServer");

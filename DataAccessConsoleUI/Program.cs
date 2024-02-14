@@ -34,7 +34,7 @@ namespace DataAccessConsoleUI
 
 		private static void InitializeDatabaseConnection()
 		{
-			_data = new DataLogic(_configuration, DBTYPES.SQLite);
+			_data = new DataLogic(_configuration, DBTYPES.MySQL);
 		}
 
 		private static void ProgramIntro()

@@ -3,6 +3,7 @@
 	public enum DBTYPES
 	{
 		SQLServer,
-		SQLite
+		SQLite,
+		MySQL
 	}
 }
